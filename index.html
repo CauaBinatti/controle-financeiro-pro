@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finanças Pro | Controle Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>💰 Finanças Pro</h1>
+        <p>Sistema Inteligente de Gestão Financeira</p>
+    </header>
+
+    <main class="container">
+        <section class="balance-cards">
+            <div class="card">
+                <h3>Entradas</h3>
+                <p id="incomeDisplay" class="positive">R$ 0,00</p>
+            </div>
+            <div class="card">
+                <h3>Saídas</h3>
+                <p id="expenseDisplay" class="negative">R$ 0,00</p>
+            </div>
+            <div class="card total">
+                <h3>Saldo Total</h3>
+                <p id="totalDisplay">R$ 0,00</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Nova Transação</h2>
+            <form id="transactionForm">
+                <input type="text" id="description" placeholder="Descrição (ex: Salário, Aluguel)" required>
+                <input type="number" id="amount" step="0.01" placeholder="Valor (use - para despesas, ex: -50.00)" required>
+                <input type="date" id="date" required>
+                <button type="submit">Adicionar Transação</button>
+            </form>
+        </section>
+
+        <section class="history-section">
+            <h2>Histórico de Movimentações</h2>
+            <table id="transactionTable">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Data</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por <strong>Cauã Binatti</strong> | Contato: <a href="mailto:mrxkbinatti@gmail.com">mrxkbinatti@gmail.com</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
